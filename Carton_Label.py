@@ -19,7 +19,9 @@ VERSION = '[ESL] Carton Print V1.1.1'
 #
 # V1.1.0(아직 미배포)
 #  1. 우측 상단 Convayor 오타 수정(Conveyor)
-
+# ㅇ V1.1.1(20250524)
+#     1. database thêm cột model_change trong model_info_v2
+#      xử lý trường hợp in label có thêm panid ở tên model
 
 class MainDialog(QDialog, Ui_Dialog):
 
@@ -29,8 +31,8 @@ class MainDialog(QDialog, Ui_Dialog):
         self.scanThread = None
         self.setupUi(self)
         self.setWindowTitle(VERSION)
-        # MAC(size, mcu code, tag type), SN(size, origin_code, model code), CTN(model code, option code)
-        self.model_info = [0, '', '', 0, '', '', '', '']
+        # MAC(size, mcu code, tag type), SN(size, origin_code, model code), CTN(model code, option code) ,model_name_change
+        self.model_info = [0, '', '', 0, '', '', '', '','']
         self.model_name = 'Select Model'
         self.model_index = 0
         self.nowDay = ''
@@ -148,7 +150,7 @@ class MainDialog(QDialog, Ui_Dialog):
                 for row in cursor.fetchall():
                     self.model_info = [int(row['mac_size']), row['mcu_code'], row['tag_type'], int(row['sn_size']),
                                        row['origin_code'], row['sn_model_code'], row['ctn_model_code'], row['ctn_opt_code'],
-                                       row['prd_fer_box'], row['tray_fer_box'], row['box_fer_pallet']]
+                                       row['prd_fer_box'], row['tray_fer_box'], row['box_fer_pallet'], row['model_name_change']]
         except Exception as e:
             print("error : {0}".format(e))
             QMessageBox.critical(self, 'Model Changed Error', str(e))
@@ -577,6 +579,12 @@ class MainDialog(QDialog, Ui_Dialog):
         else:
             strDay = chr(ord("A") + nDay - 10)
 
+        # thong tin model name
+        if self.model_info[10] == 'Y':
+            model_name_view = self.model_name + "_" + str(config.getINI('SETTING', 'panid'))
+        else:
+            model_name_view = self.model_name
+
         # 그리드 첫번째 열에 있는 CTN No 가져오기
         strCTN_No = self.tableWidget.item(0, 0).text()
 
@@ -641,7 +649,7 @@ class MainDialog(QDialog, Ui_Dialog):
                        config.getINI('PRINT_SETTING', 'prn_width'),
                        config.getINI('PRINT_SETTING', 'label_pos_x'),
                        config.getINI('PRINT_SETTING', 'label_pos_y'),
-                       self.model_name, config.getINI('SETTING', 'FW'),
+                       model_name_view, config.getINI('SETTING', 'FW'),
                        config.getINI('SETTING', 'panid'),
                        self.edit_Grid_Cnt.text(), strDate, strCtnDate, strCTN_No,
                        strBarcode)
@@ -935,7 +943,6 @@ DB connection failed.
             return
 
         return conn
-
 
 if __name__ == '__main__':
     app = QApplication()
