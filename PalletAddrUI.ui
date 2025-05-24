@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>dlgPalletAddr</class>
+ <widget class="QDialog" name="dlgPalletAddr">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>966</width>
+    <height>612</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>100</y>
+     <width>431</width>
+     <height>371</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Ship From Address</string>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>18</x>
+      <y>32</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Address 1 :</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="edit_FromAddr1">
+    <property name="geometry">
+     <rect>
+      <x>17</x>
+      <y>60</y>
+      <width>391</width>
+      <height>41</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="edit_FromAddr2">
+    <property name="geometry">
+     <rect>
+      <x>19</x>
+      <y>158</y>
+      <width>391</width>
+      <height>41</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>130</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Address 2 :</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="edit_FromAddr3">
+    <property name="geometry">
+     <rect>
+      <x>19</x>
+      <y>258</y>
+      <width>391</width>
+      <height>41</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>230</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Address 3 :</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_FromPreview">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>320</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>PreVeiw</string>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_FromSave">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>320</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>SAVE</string>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>100</y>
+     <width>431</width>
+     <height>371</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Ship To Address</string>
+   </property>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>21</x>
+      <y>32</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Address 1 :</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>23</x>
+      <y>230</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Address 3 :</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>23</x>
+      <y>130</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Address 2 :</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="edit_ToAddr2">
+    <property name="geometry">
+     <rect>
+      <x>22</x>
+      <y>158</y>
+      <width>391</width>
+      <height>41</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_ToSave">
+    <property name="geometry">
+     <rect>
+      <x>243</x>
+      <y>320</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>SAVE</string>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_ToPreview">
+    <property name="geometry">
+     <rect>
+      <x>73</x>
+      <y>320</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>PreVeiw</string>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="edit_ToAddr3">
+    <property name="geometry">
+     <rect>
+      <x>22</x>
+      <y>258</y>
+      <width>391</width>
+      <height>41</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="edit_ToAddr1">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>391</width>
+      <height>41</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QTextEdit" name="edit_FromPreview">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>490</y>
+     <width>431</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="edit_ToPreview">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>490</y>
+     <width>431</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="combo_ModelList">
+   <property name="geometry">
+    <rect>
+     <x>122</x>
+     <y>38</y>
+     <width>271</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Select Model</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>40</y>
+     <width>91</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial Black</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>MODEL  ::</string>
+   </property>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>edit_FromAddr1</tabstop>
+  <tabstop>edit_FromAddr2</tabstop>
+  <tabstop>edit_FromAddr3</tabstop>
+  <tabstop>btn_FromPreview</tabstop>
+  <tabstop>btn_FromSave</tabstop>
+  <tabstop>edit_ToAddr1</tabstop>
+  <tabstop>edit_ToAddr2</tabstop>
+  <tabstop>edit_ToAddr3</tabstop>
+  <tabstop>btn_ToPreview</tabstop>
+  <tabstop>btn_ToSave</tabstop>
+  <tabstop>edit_ToPreview</tabstop>
+  <tabstop>edit_FromPreview</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btn_FromPreview</sender>
+   <signal>pressed()</signal>
+   <receiver>dlgPalletAddr</receiver>
+   <slot>btnFromPreview()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>112</x>
+     <y>434</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>66</x>
+     <y>407</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_FromSave</sender>
+   <signal>clicked()</signal>
+   <receiver>dlgPalletAddr</receiver>
+   <slot>btnFromSave()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>355</x>
+     <y>436</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>482</x>
+     <y>382</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_ToPreview</sender>
+   <signal>clicked()</signal>
+   <receiver>dlgPalletAddr</receiver>
+   <slot>btnToPreview()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>667</x>
+     <y>432</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>714</x>
+     <y>409</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_ToSave</sender>
+   <signal>clicked()</signal>
+   <receiver>dlgPalletAddr</receiver>
+   <slot>btnToSave()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>840</x>
+     <y>448</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>898</x>
+     <y>409</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>combo_ModelList</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>dlgPalletAddr</receiver>
+   <slot>comboModelChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>245</x>
+     <y>52</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>466</x>
+     <y>53</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>btnFromPreview()</slot>
+  <slot>btnFromSave()</slot>
+  <slot>btnToPreview()</slot>
+  <slot>btnToSave()</slot>
+  <slot>comboModelChanged()</slot>
+ </slots>
+</ui>

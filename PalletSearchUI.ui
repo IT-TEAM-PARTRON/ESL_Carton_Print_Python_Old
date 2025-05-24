@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>dlgPalletSearch</class>
+ <widget class="QDialog" name="dlgPalletSearch">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>898</width>
+    <height>425</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>120</y>
+     <width>881</width>
+     <height>301</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>881</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Search Info</string>
+   </property>
+   <widget class="QPushButton" name="btnSearch">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>24</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Search...</string>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="edit_PalletID">
+    <property name="geometry">
+     <rect>
+      <x>465</x>
+      <y>30</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="edit_CartonID">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>30</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>36</y>
+      <width>101</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Carton ID ::</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>36</y>
+      <width>101</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Pallet ID ::</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>edit_CartonID</tabstop>
+  <tabstop>edit_PalletID</tabstop>
+  <tabstop>btnSearch</tabstop>
+  <tabstop>tableWidget</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btnSearch</sender>
+   <signal>clicked()</signal>
+   <receiver>dlgPalletSearch</receiver>
+   <slot>btnSearchClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>836</x>
+     <y>58</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>609</x>
+     <y>101</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>edit_CartonID</sender>
+   <signal>returnPressed()</signal>
+   <receiver>dlgPalletSearch</receiver>
+   <slot>editCartonIDPressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>197</x>
+     <y>62</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>169</x>
+     <y>103</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>edit_PalletID</sender>
+   <signal>returnPressed()</signal>
+   <receiver>dlgPalletSearch</receiver>
+   <slot>editPalletIDPressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>483</x>
+     <y>61</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>454</x>
+     <y>100</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>btnSearchClicked()</slot>
+  <slot>editCartonIDPressed()</slot>
+  <slot>editPalletIDPressed()</slot>
+ </slots>
+</ui>

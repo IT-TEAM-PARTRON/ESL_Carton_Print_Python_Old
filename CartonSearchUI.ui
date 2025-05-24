@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>dlgProductSearch</class>
+ <widget class="QDialog" name="dlgProductSearch">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1029</width>
+    <height>453</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="modal">
+   <bool>false</bool>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>1001</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Search Info</string>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>61</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>MAC ::</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>277</x>
+      <y>30</y>
+      <width>61</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>SN ::</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="edit_InputMac">
+    <property name="geometry">
+     <rect>
+      <x>81</x>
+      <y>24</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="edit_InputSN">
+    <property name="geometry">
+     <rect>
+      <x>327</x>
+      <y>24</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnSearch">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>19</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Search...</string>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>31</y>
+      <width>101</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Carton ID ::</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="edit_CartonID">
+    <property name="geometry">
+     <rect>
+      <x>638</x>
+      <y>25</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>120</y>
+     <width>1011</width>
+     <height>331</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::WheelFocus</enum>
+   </property>
+   <property name="horizontalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>edit_InputMac</tabstop>
+  <tabstop>edit_InputSN</tabstop>
+  <tabstop>edit_CartonID</tabstop>
+  <tabstop>btnSearch</tabstop>
+  <tabstop>tableWidget</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btnSearch</sender>
+   <signal>clicked()</signal>
+   <receiver>dlgProductSearch</receiver>
+   <slot>btnSearchClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>909</x>
+     <y>53</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>558</x>
+     <y>81</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>edit_InputSN</sender>
+   <signal>returnPressed()</signal>
+   <receiver>dlgProductSearch</receiver>
+   <slot>editSNPressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>370</x>
+     <y>46</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>396</x>
+     <y>96</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>edit_InputMac</sender>
+   <signal>returnPressed()</signal>
+   <receiver>dlgProductSearch</receiver>
+   <slot>editMACPressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>121</x>
+     <y>63</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>121</x>
+     <y>103</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>edit_CartonID</sender>
+   <signal>returnPressed()</signal>
+   <receiver>dlgProductSearch</receiver>
+   <slot>editCartonIDPressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>721</x>
+     <y>60</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>652</x>
+     <y>102</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>btnSearchClicked()</slot>
+  <slot>editSNPressed()</slot>
+  <slot>editMACPressed()</slot>
+  <slot>editCartonIDPressed()</slot>
+ </slots>
+</ui>
