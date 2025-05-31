@@ -32,7 +32,7 @@ class MainDialog(QDialog, Ui_Dialog):
         self.setupUi(self)
         self.setWindowTitle(VERSION)
         # MAC(size, mcu code, tag type), SN(size, origin_code, model code), CTN(model code, option code) ,model_name_change
-        self.model_info = [0, '', '', 0, '', '', '', '','']
+        self.model_info = [0, '', '', 0, '', '', '', '','','','','']
         self.model_name = 'Select Model'
         self.model_index = 0
         self.nowDay = ''
@@ -580,7 +580,7 @@ class MainDialog(QDialog, Ui_Dialog):
             strDay = chr(ord("A") + nDay - 10)
 
         # thong tin model name
-        if self.model_info[10] == 'Y':
+        if self.model_info[11] == 'Y':
             model_name_view = self.model_name + "_" + str(config.getINI('SETTING', 'panid'))
         else:
             model_name_view = self.model_name
