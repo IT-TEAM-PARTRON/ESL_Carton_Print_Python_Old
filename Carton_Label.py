@@ -12,7 +12,7 @@ import pymysql
 import socket
 
 DEBUG = False
-VERSION = '[ESL] Carton Print V1.1.1'
+VERSION = '[ESL] Carton Print V1.1.2'
 
 # V1.0.9(20240812)
 #  1. 법인 출장가서 마지막 배포 버전
@@ -22,6 +22,8 @@ VERSION = '[ESL] Carton Print V1.1.1'
 # ㅇ V1.1.1(20250524)
 #     1. database thêm cột model_change trong model_info_v2
 #      xử lý trường hợp in label có thêm panid ở tên model
+# V1.1.2(20250710)
+#     1. thêm check thông tin RMA : ok -> R
 
 class MainDialog(QDialog, Ui_Dialog):
 
@@ -57,6 +59,7 @@ class MainDialog(QDialog, Ui_Dialog):
         self.comport = config.getINI('SETTING', 'conveyor_comport')  # 수작업 일 경우 해당 값을 ini에서 공백 처리
         self.scanDelay = float(config.getINI('SETTING', 'scan_delay'))
         self.edit_Comport.setText(self.comport)
+        self.check_Rma.setChecked(False)
 
         if self.conveyor_mode == 'True':
             self.check_Conveyor.toggle()
@@ -584,6 +587,9 @@ class MainDialog(QDialog, Ui_Dialog):
             model_name_view = self.model_name + "_" + str(config.getINI('SETTING', 'panid'))
         else:
             model_name_view = self.model_name
+
+        if self.check_Rma.isChecked():   #kiểm tra có phải hàng RMA không ?
+            model_name_view = model_name_view + "_R"
 
         # 그리드 첫번째 열에 있는 CTN No 가져오기
         strCTN_No = self.tableWidget.item(0, 0).text()

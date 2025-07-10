@@ -53,7 +53,6 @@
      <font>
       <family>맑은 고딕</family>
       <pointsize>23</pointsize>
-      <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
@@ -74,7 +73,7 @@
      <cursorShape>CrossCursor</cursorShape>
     </property>
     <property name="alignment">
-     <set>Qt::AlignCenter</set>
+     <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
     <property name="placeholderText">
      <string>Input MacAddress</string>
@@ -93,7 +92,7 @@
      <cursorShape>CrossCursor</cursorShape>
     </property>
     <property name="alignment">
-     <set>Qt::AlignCenter</set>
+     <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
     <property name="placeholderText">
      <string>Input Serial Number</string>
@@ -112,7 +111,6 @@
      <font>
       <family>맑은 고딕</family>
       <pointsize>23</pointsize>
-      <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
@@ -134,7 +132,6 @@
     <font>
      <family>Arial Black</family>
      <pointsize>12</pointsize>
-     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
@@ -187,7 +184,6 @@
      <font>
       <family>헤드라인</family>
       <pointsize>20</pointsize>
-      <weight>50</weight>
       <bold>false</bold>
       <underline>true</underline>
      </font>
@@ -229,7 +225,6 @@
      <font>
       <family>맑은 고딕</family>
       <pointsize>15</pointsize>
-      <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
@@ -241,7 +236,7 @@ color:black;</string>
      <string>PRODUCT</string>
     </property>
     <property name="alignment">
-     <set>Qt::AlignCenter</set>
+     <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="label_7">
@@ -257,7 +252,6 @@ color:black;</string>
      <font>
       <family>맑은 고딕</family>
       <pointsize>15</pointsize>
-      <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
@@ -269,7 +263,7 @@ color:black;</string>
      <string>BOX</string>
     </property>
     <property name="alignment">
-     <set>Qt::AlignCenter</set>
+     <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
    </widget>
   </widget>
@@ -284,7 +278,6 @@ color:black;</string>
    </property>
    <property name="font">
     <font>
-     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
@@ -307,7 +300,6 @@ color:black;</string>
    <property name="font">
     <font>
      <pointsize>10</pointsize>
-     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
@@ -330,7 +322,6 @@ color:black;</string>
    <property name="font">
     <font>
      <pointsize>10</pointsize>
-     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
@@ -351,13 +342,13 @@ color:black;</string>
     </rect>
    </property>
    <property name="focusPolicy">
-    <enum>Qt::WheelFocus</enum>
+    <enum>Qt::FocusPolicy::WheelFocus</enum>
    </property>
    <property name="verticalScrollBarPolicy">
-    <enum>Qt::ScrollBarAsNeeded</enum>
+    <enum>Qt::ScrollBarPolicy::ScrollBarAsNeeded</enum>
    </property>
    <property name="horizontalScrollBarPolicy">
-    <enum>Qt::ScrollBarAlwaysOff</enum>
+    <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
    </property>
    <property name="autoScroll">
     <bool>true</bool>
@@ -393,7 +384,6 @@ color:black;</string>
      <font>
       <family>맑은 고딕</family>
       <pointsize>13</pointsize>
-      <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
@@ -404,7 +394,7 @@ color:black;</string>
      <bool>false</bool>
     </property>
     <property name="alignment">
-     <set>Qt::AlignCenter</set>
+     <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
     <property name="readOnly">
      <bool>true</bool>
@@ -433,7 +423,6 @@ color:black;</string>
      <font>
       <family>맑은 고딕</family>
       <pointsize>13</pointsize>
-      <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
@@ -444,7 +433,7 @@ color:black;</string>
      <bool>false</bool>
     </property>
     <property name="alignment">
-     <set>Qt::AlignCenter</set>
+     <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
     <property name="readOnly">
      <bool>true</bool>
@@ -473,7 +462,6 @@ color:black;</string>
      <font>
       <family>맑은 고딕</family>
       <pointsize>13</pointsize>
-      <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
@@ -484,7 +472,7 @@ color:black;</string>
      <bool>false</bool>
     </property>
     <property name="alignment">
-     <set>Qt::AlignCenter</set>
+     <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
     <property name="readOnly">
      <bool>true</bool>
@@ -514,12 +502,11 @@ color:black;</string>
     <font>
      <family>Arial</family>
      <pointsize>24</pointsize>
-     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
    <property name="alignment">
-    <set>Qt::AlignCenter</set>
+    <set>Qt::AlignmentFlag::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLabel" name="label_10">
@@ -534,7 +521,6 @@ color:black;</string>
    <property name="font">
     <font>
      <pointsize>11</pointsize>
-     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
@@ -557,7 +543,6 @@ color:black;</string>
    <property name="font">
     <font>
      <pointsize>12</pointsize>
-     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
@@ -565,7 +550,7 @@ color:black;</string>
     <string/>
    </property>
    <property name="alignment">
-    <set>Qt::AlignCenter</set>
+    <set>Qt::AlignmentFlag::AlignCenter</set>
    </property>
    <property name="readOnly">
     <bool>true</bool>
@@ -579,7 +564,7 @@ color:black;</string>
     <rect>
      <x>20</x>
      <y>340</y>
-     <width>841</width>
+     <width>651</width>
      <height>71</height>
     </rect>
    </property>
@@ -591,7 +576,7 @@ color:black;</string>
      <rect>
       <x>14</x>
       <y>30</y>
-      <width>151</width>
+      <width>121</width>
       <height>21</height>
      </rect>
     </property>
@@ -599,7 +584,6 @@ color:black;</string>
      <font>
       <family>Arial Black</family>
       <pointsize>12</pointsize>
-      <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
@@ -610,25 +594,25 @@ color:black;</string>
    <widget class="QLineEdit" name="edit_FW">
     <property name="geometry">
      <rect>
-      <x>174</x>
-      <y>27</y>
+      <x>140</x>
+      <y>20</y>
       <width>111</width>
-      <height>31</height>
+      <height>41</height>
      </rect>
     </property>
     <property name="maxLength">
      <number>5</number>
     </property>
     <property name="alignment">
-     <set>Qt::AlignCenter</set>
+     <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="label_8">
     <property name="geometry">
      <rect>
-      <x>380</x>
+      <x>290</x>
       <y>30</y>
-      <width>151</width>
+      <width>91</width>
       <height>21</height>
      </rect>
     </property>
@@ -636,7 +620,6 @@ color:black;</string>
      <font>
       <family>Arial Black</family>
       <pointsize>12</pointsize>
-      <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
@@ -647,23 +630,23 @@ color:black;</string>
    <widget class="QLineEdit" name="edit_PanID">
     <property name="geometry">
      <rect>
-      <x>500</x>
-      <y>28</y>
+      <x>380</x>
+      <y>20</y>
       <width>111</width>
-      <height>31</height>
+      <height>41</height>
      </rect>
     </property>
     <property name="maxLength">
      <number>8</number>
     </property>
     <property name="alignment">
-     <set>Qt::AlignCenter</set>
+     <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
    </widget>
    <widget class="QPushButton" name="btn_BaseInfoSave">
     <property name="geometry">
      <rect>
-      <x>680</x>
+      <x>520</x>
       <y>20</y>
       <width>111</width>
       <height>41</height>
@@ -672,7 +655,6 @@ color:black;</string>
     <property name="font">
      <font>
       <pointsize>15</pointsize>
-      <weight>75</weight>
       <bold>true</bold>
       <underline>true</underline>
      </font>
@@ -696,7 +678,6 @@ color:black;</string>
    </property>
    <property name="font">
     <font>
-     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
@@ -721,7 +702,6 @@ color:black;</string>
    </property>
    <property name="font">
     <font>
-     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
@@ -770,6 +750,38 @@ color:black;</string>
    <property name="readOnly">
     <bool>true</bool>
    </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_5">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>350</y>
+     <width>161</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <widget class="QCheckBox" name="check_Rma">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>RMA CHECK </string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <tabstops>
